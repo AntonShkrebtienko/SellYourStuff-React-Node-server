@@ -4,7 +4,7 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     return queryInterface.addConstraint(
-        'Products',
+        'products',
         {
           fields: ['userId'],
           type: 'FOREIGN KEY', name: 'Products_userId_Users_fk',
@@ -24,7 +24,7 @@ module.exports = {
 
   async down (queryInterface, Sequelize) {
     return queryInterface.removeConstraint(
-        'Products',
+        'products',
         'Products_userId_Users_fk'
     )
     /**
